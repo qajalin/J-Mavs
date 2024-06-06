@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-22T20:53:02.892112" rpa="false" schemaversion="5">
+<suite id="s1" name="testLogin" source="C:\Testing\Aset\tests\ui\mobile\feature\login\testLogin.robot">
+<test id="s1-t1" name="Should send keys to search box and then check the value" line="12">
+<kw name="Open Test Application">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-22T20:53:03.026935" elapsed="10.525072"/>
+</kw>
+<status status="PASS" start="2024-05-22T20:53:03.026935" elapsed="10.525072"/>
+</kw>
+<status status="PASS" start="2024-05-22T20:53:03.025897" elapsed="10.526110"/>
+</test>
+<doc>Simple example using Appium Library</doc>
+<status status="PASS" start="2024-05-22T20:53:02.894930" elapsed="10.657077"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testLogin">testLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

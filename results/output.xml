@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-06T14:40:35.240393" rpa="false" schemaversion="5">
+<suite id="s1" name="Aset" source="C:\Testing\Aset">
+<suite id="s1-s1" name="Src" source="C:\Testing\Aset\src">
+<suite id="s1-s1-s1" name="Tests" source="C:\Testing\Aset\src\tests">
+<suite id="s1-s1-s1-s1" name="E2E" source="C:\Testing\Aset\src\tests\E2E">
+<suite id="s1-s1-s1-s1-s1" name="TestCreateAsset" source="C:\Testing\Aset\src\tests\E2E\TestCreateAsset.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Test end to end create asset success" line="7">
+<kw name="Prepare Environment" owner="Web" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:35.675722" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-06-06T14:40:35.675722" elapsed="1.642174"/>
+</kw>
+<status status="PASS" start="2024-06-06T14:40:35.674730" elapsed="1.643166"/>
+</kw>
+<kw name="Open Browser To Login Page" owner="Web">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:37.319446" level="INFO">Opening url 'https://james.jalin.co.id:8443/'</msg>
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-06T14:40:37.319446" elapsed="6.724100"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-06T14:40:44.043546" elapsed="0.069186"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomePage}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-06T14:40:44.112732" elapsed="0.017586"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:44.131332" level="INFO">Verifying element '//h4[contains(text(),'Tools Asset Management')]' contains exact text 'Tools Asset Management'.</msg>
+<arg>${welcomePage}</arg>
+<arg>Tools Asset Management</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-06T14:40:44.130318" elapsed="0.030052"/>
+</kw>
+<status status="PASS" start="2024-06-06T14:40:37.318921" elapsed="6.841449"/>
+</kw>
+<kw name="Login as Admin GA succesfully" owner="Web">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:44.162462" level="INFO">Typing text 'admin.ga@jalin.co.id' into text field 'control-hooks_username'.</msg>
+<arg>${userLogin}</arg>
+<arg>admin.ga@jalin.co.id</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:44.161450" elapsed="0.198399"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:45.361581" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:44.359849" elapsed="1.001732"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:45.363710" level="INFO">Typing text 'password' into text field 'control-hooks_password'.</msg>
+<arg>${passLogin}</arg>
+<arg>password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:45.361581" elapsed="0.107643"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:46.470477" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:45.469224" elapsed="1.001781"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:46.471005" level="INFO">Clicking button '//*[@type='submit']'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:46.471005" elapsed="0.084698"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${profilAdminGA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-06T14:40:46.555703" elapsed="0.877013"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:47.433739" level="INFO">Verifying element '//*[contains(text(),'Rahmat Adi Seputro | Admin GA')]' contains exact text 'Rahmat Adi Seputro | Admin GA'.</msg>
+<arg>${profilAdminGA}</arg>
+<arg>Rahmat Adi Seputro | Admin GA</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-06T14:40:47.432716" elapsed="0.017139"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:48.451229" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:47.449855" elapsed="1.001374"/>
+</kw>
+<status status="PASS" start="2024-06-06T14:40:44.161450" elapsed="4.290378"/>
+</kw>
+<kw name="Validation create penerimaan asset" owner="E2E">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:48.453835" level="INFO">Clicking element '//*[@role='menuitem' and @path='/penerimaan-asset']'.</msg>
+<arg>${menuPenerimaanAset}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:48.452837" elapsed="0.069452"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${titlePenerimaanAset}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-06T14:40:48.522289" elapsed="0.027565"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:48.549854" level="INFO">Verifying element '//*[@title='Penerimaan Asset']' contains exact text 'Penerimaan Asset'.</msg>
+<arg>${titlePenerimaanAset}</arg>
+<arg>Penerimaan Asset</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-06T14:40:48.549854" elapsed="0.018038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${addAssetBtn}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-06T14:40:48.568818" elapsed="0.229016"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:48.797834" level="INFO">Clicking button '//*[normalize-space()='Tambah Penerimaan Asset']'.</msg>
+<arg>${addAssetBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:48.797834" elapsed="0.087416"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:49.886538" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:48.885250" elapsed="1.001288"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${assetTotal}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-06T14:40:49.886538" elapsed="0.027521"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:49.915082" level="INFO">Typing text '5' into text field '//*[@id='control-hooks_total']'.</msg>
+<arg>${assetTotal}</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:49.915082" elapsed="0.058468"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:49.974555" level="INFO">Typing text 'menara' into text field '//*[@id='control-hooks_building_id']'.</msg>
+<arg>${assetBuildingLoc}</arg>
+<arg>menara</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:49.973550" elapsed="0.088798"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:50.063340" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg time="2024-06-06T14:40:50.064339" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg time="2024-06-06T14:40:50.064339" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-06T14:40:50.063340" elapsed="0.008518"/>
+</kw>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2024-06-06T14:40:50.062348" elapsed="0.009510"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:50.072881" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-06-06T14:40:50.073878" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-06-06T14:40:50.073878" level="INFO">Releasing special key ENTER.</msg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-06T14:40:50.072881" elapsed="0.016165"/>
+</kw>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2024-06-06T14:40:50.072881" elapsed="0.016165"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:50.090044" level="INFO">Clicking element '//*[@id='control-hooks_date_arrived']'.</msg>
+<arg>${assetDateArrived}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:50.089046" elapsed="0.082253"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:51.172699" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:50.172357" elapsed="1.001372"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:51.175714" level="INFO">Clicking element '//a[contains(text(),'Today')]'.</msg>
+<arg>${assetDateTodayBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:51.173729" elapsed="0.061817"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:52.236982" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:51.236546" elapsed="1.001066"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Evaluate" owner="BuiltIn">
+<arg>random.randint(1000, 9999)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T14:40:52.238637" elapsed="0.000000"/>
+</kw>
+<msg time="2024-06-06T14:40:52.238637" level="INFO">${random_number} = 5933</msg>
+<var>${random_number}</var>
+<arg>Evaluate</arg>
+<arg>random.randint(1000, 9999)</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2024-06-06T14:40:52.237742" elapsed="0.001931"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:52.240712" level="INFO">Typing text '5933' into text field '//*[@id='control-hooks_cip_number']'.</msg>
+<arg>${assetCipNumber}</arg>
+<arg>${random_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:52.239673" elapsed="0.130293"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:53.371304" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:52.369966" elapsed="1.001849"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T14:40:53.372822" level="INFO">Typing text 'create via automation' into text field '//*[@id='control-hooks_description']'.</msg>
+<arg>${assetDescription}</arg>
+<arg>create via automation</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T14:40:53.371815" elapsed="0.131684"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T14:40:54.503818" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T14:40:53.503499" elapsed="1.000319"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T14:40:54.503818" elapsed="2.394560"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-06-06T14:40:56.899365" level="INFO">Creating Session using : alias=LOGIN, url=https://james.jalin.co.id:8444, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<arg>LOGIN</arg>
+<arg>${APP_URL}</arg>
+<arg>verify=true</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-06-06T14:40:56.898378" elapsed="0.001998"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-06-06T14:40:57.055983" level="INFO">POST Request : url=https://james.jalin.co.id:8444/api/authenticate 
+ path_url=/api/authenticate 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '62'} 
+ body={ "email": "admin.itops@jalin.co.id", "password": "password" } 
+ </msg>
+<msg time="2024-06-06T14:40:57.056996" level="INFO">POST Response : url=https://james.jalin.co.id:8444/api/authenticate 
+ status=200, reason= 
+ headers={'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Thu, 06 Jun 2024 07:40:57 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'} 
+ body={"data":{"acces_token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2LGFkbWluLml0b3BzQGphbGluLmNvLmlkIiwiaXNzIjoiQ29kZUphdmEiLCJpYXQiOjE3MTc2NTk2NTcsImV4cCI6MTcxNzc0NjA1N30.0j3adooRGmtUL2qXf3Q9uRJG5fm6Lf1uowJPZUWKap1TQrKxgxqD3zyd58Ix-Qt6kp1NH8aE_XKwj2LzVjPmPw","user":{"id":6,"name":"Robby","email":"admin.itops@jalin.co.id","nip":null,"unitId":210,"position_id":3,"is_active_flag":true,"created_at":null,"updated_at":null,"created_by":1,"role":{"id":"USER","name":"User","level":"STAFF"},"position":{"id":3,"code":"STAFF","name":"Staff","position_level":0,"created_at":null,"created_by":0},"unit":{"id":210,"code":null,"name":"COORPORATE IT","address":null,"created_at":null,"created_by":1,"root_id":200,"level":2,"key":"COORPORATE_IT","migrated_asset":null},"signature":"L323ffY4RcyjKzG_asset-signature.jpg","enabled":true,"authorities":null,"password":"$2a$06$Yv63O6Ed7dSXU8/.iTOBN.zn6th5zWXiMySMI7ymjZ.1hv2zF9knS","username":"admin.itops@jalin.co.id","accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"role_id":"USER","downstream_unit_id":[210]}},"message":"success","http_status":"OK","error":false} 
+ </msg>
+<msg time="2024-06-06T14:40:57.057584" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>LOGIN</arg>
+<arg>/api/authenticate</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>data=${BODY}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-06-06T14:40:56.901385" elapsed="0.156199"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-06-06T14:40:57.059516" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-06-06T14:40:57.057584" elapsed="0.001932"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.json()['message']}</arg>
+<arg>success</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-06-06T14:40:57.060606" elapsed="0.000912"/>
+</kw>
+<doc>Test API Login</doc>
+<status status="PASS" start="2024-06-06T14:40:48.452837" elapsed="8.608681"/>
+</kw>
+<doc>End to end create asset</doc>
+<tag>e2e</tag>
+<status status="PASS" start="2024-06-06T14:40:35.673725" elapsed="21.389030"/>
+</test>
+<status status="PASS" start="2024-06-06T14:40:35.269946" elapsed="21.794823"/>
+</suite>
+<status status="PASS" start="2024-06-06T14:40:35.267416" elapsed="21.801001"/>
+</suite>
+<status status="PASS" start="2024-06-06T14:40:35.264419" elapsed="21.806105"/>
+</suite>
+<status status="PASS" start="2024-06-06T14:40:35.262419" elapsed="21.811011"/>
+</suite>
+<status status="PASS" start="2024-06-06T14:40:35.245388" elapsed="21.830030"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">e2e</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Aset">Aset</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Src">Aset.Src</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tests">Aset.Src.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="E2E">Aset.Src.Tests.E2E</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TestCreateAsset">Aset.Src.Tests.E2E.TestCreateAsset</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

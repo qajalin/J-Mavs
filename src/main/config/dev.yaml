@@ -1,0 +1,18 @@
+# These are scalars:
+BASE_URL: https://james.jalin.co.id:8444
+
+# SUPER ADMIN
+SUPER_ADMIN: tools.asset@jalin.co.id
+
+# USER GA
+ADMIN_OPS: admin.ga@jalin.co.id
+HEAD_OPS: head.ga@jalin.co.id
+VP_OPS: vp.ga@jalin.co.id
+
+# USER OPERATION
+ADMIN_OPS: admin.itops@jalin.co.id
+HEAD_OPS: head.itops@jalin.co.id
+VP_OPS: vp.itops@jalin.co.id
+
+# DEFAULT USER PASSWORD
+PASSWORD: password
