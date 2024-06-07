@@ -1,1 +1,1 @@
-# J-Mavs (Jalin Machine automation validation system)
+# James Asset Management
