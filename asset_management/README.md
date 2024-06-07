@@ -1,1 +1,1 @@
-# J-Mavs
+# J-Mavs (Jalin Machine automation validation system)
