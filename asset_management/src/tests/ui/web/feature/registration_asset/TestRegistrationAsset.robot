@@ -94,3 +94,31 @@ Test Validation search data base on Status Asset
     Web.Open Browser To Login Page
     Web.Login success
     Registration.Validation search data base on Status Asset
+
+Test Validation click Next button
+    [Documentation]    As a user able to click Next button
+    [Tags]    Registration   
+    Web.Open Browser To Login Page
+    Web.Login success
+    Registration.Validation click Next button
+
+Test Validation click Prev button
+    [Documentation]    As a user able to click Prevesious button
+    [Tags]    Registration   
+    Web.Open Browser To Login Page
+    Web.Login success
+    Registration.Validation click Prev button 
+
+Test Validation click two icon button
+    [Documentation]    As a user able to click two button to next page
+    [Tags]    Registration   
+    Web.Open Browser To Login Page
+    Web.Login success
+    Registration.Validation next page with click two button in pagination
+
+Test Validation click one icon button
+    [Documentation]    As a user able to click one button to prev page
+    [Tags]    Registration   
+    Web.Open Browser To Login Page
+    Web.Login success
+    Registration.Validation next page with click one button in pagination

@@ -46,4 +46,11 @@ ${regLengkapiDataButton}    //*[contains(text(),'Lengkapi Data')]
 ${regErrMessageUploadFile}    //*[contains(text(),'Document File is Required!')]
 ${regLengkapiDataButton}    //*[contains(text(),'Lengkapi Data')]
 
-
+# Pagination
+${regPagination}    //*[@class='ant-pagination ant-table-pagination ant-table-pagination-right']
+${regNextBtn}    //*[@class='ant-pagination-next']//child::button
+${regPrevBtn}    //*[@class='ant-pagination-prev']//child::button
+${regOneBtnActived}    //*[@class='ant-pagination-item ant-pagination-item-1 ant-pagination-item-active']
+${regTwoBtnActived}    //*[@class='ant-pagination-item ant-pagination-item-2 ant-pagination-item-active']
+${regOneButtonPage}    //*[@class='ant-pagination-item ant-pagination-item-1']
+${regTwoButtonPage}    //*[@class='ant-pagination-item ant-pagination-item-2']

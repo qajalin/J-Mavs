@@ -263,3 +263,38 @@ Validation click Lengkapi Data button
     Click Element    ${regLengkapiDataButton}
     Sleep    1s
     Close Browser
+
+# VALIDATION FOR PAGINATION
+Validation click Next button
+    Wait Until Element Is Visible    ${regPagination}    5s
+    Click Element    ${regNextBtn}
+    Sleep    1s
+    Wait Until Element Is Visible    ${regTwoBtnActived}    3s
+    Close Browser
+
+Validation click Prev button
+    Wait Until Element Is Visible    ${regPagination}    5s
+    Click Element    ${regNextBtn}
+    Sleep    1s
+    Wait Until Element Is Visible    ${regTwoBtnActived}    3s
+    Click Element    ${regPrevBtn}
+    Sleep    1s
+    Wait Until Element Is Visible    ${regOneBtnActived}    3s
+    Close Browser
+
+Validation next page with click two button in pagination
+    Wait Until Element Is Visible    ${regPagination}    5s
+    Click Element    ${regTwoButtonPage}
+    Sleep    1s
+    Wait Until Element Is Visible    ${regTwoBtnActived}    3s
+    Close Browser
+
+Validation next page with click one button in pagination
+    Wait Until Element Is Visible    ${regPagination}    5s
+    Click Element    ${regTwoButtonPage}
+    Sleep    1s
+    Wait Until Element Is Visible    ${regTwoBtnActived}    3s
+    Click Element    ${regOneButtonPage}
+    Sleep    1s
+    Wait Until Element Is Visible    ${regOneBtnActived}    3s
+    Close Browser
