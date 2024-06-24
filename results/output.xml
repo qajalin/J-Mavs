@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-10T16:29:13.812907" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-24T16:33:25.643370" rpa="false" schemaversion="5">
 <suite id="s1" name="J-Mavs" source="C:\Testing\J-Mavs">
 <suite id="s1-s1" name="Asset Management" source="C:\Testing\J-Mavs\asset_management">
 <suite id="s1-s1-s1" name="Src" source="C:\Testing\J-Mavs\asset_management\src">
@@ -7,173 +7,126 @@
 <suite id="s1-s1-s1-s1-s1" name="Ui" source="C:\Testing\J-Mavs\asset_management\src\tests\ui">
 <suite id="s1-s1-s1-s1-s1-s1" name="Web" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web">
 <suite id="s1-s1-s1-s1-s1-s1-s1" name="Feature" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature">
-<suite id="s1-s1-s1-s1-s1-s1-s1-s1" name="Registration Asset" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\registration_asset">
-<suite id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestRegistrationAsset" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\registration_asset\TestRegistrationAsset.robot">
-<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="Test Validation click one icon button" line="119">
+<suite id="s1-s1-s1-s1-s1-s1-s1-s1" name="Login" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\login">
+<suite id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestLogin" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\login\TestLogin.robot">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="AM-TC-41 Test login success" line="7">
 <kw name="Prepare Environment" owner="Web" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:13.990586" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-06-24T16:33:25.830468" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-06-10T16:29:13.990586" elapsed="1.465916"/>
+<status status="PASS" start="2024-06-24T16:33:25.830468" elapsed="3.433543"/>
 </kw>
-<status status="PASS" start="2024-06-10T16:29:13.983078" elapsed="1.473424"/>
+<status status="PASS" start="2024-06-24T16:33:25.830468" elapsed="3.433543"/>
 </kw>
 <kw name="Open Browser To Login Page" owner="Web">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:15.458092" level="INFO">Opening url 'https://james.jalin.co.id:8443/'</msg>
+<msg time="2024-06-24T16:33:29.264011" level="INFO">Opening url 'https://james.jalin.co.id:8443/'</msg>
 <arg>${LOGIN URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-06-10T16:29:15.457569" elapsed="7.931801"/>
+<status status="PASS" start="2024-06-24T16:33:29.264011" elapsed="15.073670"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-10T16:29:23.389370" elapsed="0.044230"/>
+<status status="PASS" start="2024-06-24T16:33:44.338420" elapsed="0.043491"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${welcomePage}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-10T16:29:23.433600" elapsed="0.013909"/>
+<status status="PASS" start="2024-06-24T16:33:44.381911" elapsed="0.026623"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:23.448392" level="INFO">Verifying element '//h4[contains(text(),'Tools Asset Management')]' contains exact text 'Tools Asset Management'.</msg>
+<msg time="2024-06-24T16:33:44.408534" level="INFO">Verifying element '//h4[contains(text(),'Tools Asset Management')]' contains exact text 'Tools Asset Management'.</msg>
 <arg>${welcomePage}</arg>
 <arg>Tools Asset Management</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-10T16:29:23.448043" elapsed="0.024419"/>
+<status status="PASS" start="2024-06-24T16:33:44.408534" elapsed="0.047863"/>
 </kw>
-<status status="PASS" start="2024-06-10T16:29:15.457037" elapsed="8.015425"/>
+<status status="PASS" start="2024-06-24T16:33:29.264011" elapsed="15.192386"/>
 </kw>
 <kw name="Login success" owner="Web">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:23.474468" level="INFO">Typing text 'admin.itops@jalin.co.id' into text field '//input[@id='control-hooks_username']'.</msg>
+<msg time="2024-06-24T16:33:44.456397" level="INFO">Typing text 'admin.itops@jalin.co.id' into text field '//input[@id='control-hooks_username']'.</msg>
 <arg>${userLogin}</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-10T16:29:23.473464" elapsed="0.187230"/>
+<status status="PASS" start="2024-06-24T16:33:44.456397" elapsed="0.348110"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-10T16:29:24.661526" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-24T16:33:45.807478" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-10T16:29:23.660694" elapsed="1.000832"/>
+<status status="PASS" start="2024-06-24T16:33:44.805886" elapsed="1.003111"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:24.661526" level="INFO">Typing text 'password' into text field '//input[@id='control-hooks_password']'.</msg>
+<msg time="2024-06-24T16:33:45.808997" level="INFO">Typing text 'password' into text field '//input[@id='control-hooks_password']'.</msg>
 <arg>${passLogin}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-10T16:29:24.661526" elapsed="0.098443"/>
+<status status="PASS" start="2024-06-24T16:33:45.808997" elapsed="0.211541"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-10T16:29:25.761701" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-24T16:33:47.023432" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-10T16:29:24.759969" elapsed="1.002765"/>
+<status status="PASS" start="2024-06-24T16:33:46.022495" elapsed="1.002566"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:25.765704" level="INFO">Clicking button '//*[@type='submit']'.</msg>
+<msg time="2024-06-24T16:33:47.025061" level="INFO">Clicking button '//*[@type='submit']'.</msg>
 <arg>${loginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-10T16:29:25.762734" elapsed="0.110333"/>
+<status status="PASS" start="2024-06-24T16:33:47.025061" elapsed="0.154988"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${profileAdmin}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-10T16:29:25.873067" elapsed="0.866092"/>
+<status status="PASS" start="2024-06-24T16:33:47.180832" elapsed="0.900333"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:26.740161" level="INFO">Verifying element '//*[contains(text(),'Robby | User')]' contains exact text 'Robby | User'.</msg>
+<msg time="2024-06-24T16:33:48.090197" level="INFO">Verifying element '//*[contains(text(),'Robby | User')]' contains exact text 'Robby | User'.</msg>
 <arg>${profileAdmin}</arg>
 <arg>Robby | User</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-10T16:29:26.740161" elapsed="0.010033"/>
+<status status="PASS" start="2024-06-24T16:33:48.089091" elapsed="0.032011"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-10T16:29:27.750901" level="INFO">Slept 1 second.</msg>
+<msg time="2024-06-24T16:33:49.121590" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-10T16:29:26.750194" elapsed="1.000707"/>
+<status status="PASS" start="2024-06-24T16:33:48.121102" elapsed="1.000488"/>
 </kw>
-<status status="PASS" start="2024-06-10T16:29:23.473464" elapsed="4.277437"/>
+<status status="PASS" start="2024-06-24T16:33:44.456397" elapsed="4.665193"/>
 </kw>
-<kw name="Validation next page with click one button in pagination" owner="Registration">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${regPagination}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-10T16:29:27.750901" elapsed="0.755602"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:28.506503" level="INFO">Clicking element '//*[@class='ant-pagination-item ant-pagination-item-2']'.</msg>
-<arg>${regTwoButtonPage}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-10T16:29:28.506503" elapsed="0.092567"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-10T16:29:29.599781" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-10T16:29:28.599070" elapsed="1.000711"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${regTwoBtnActived}</arg>
-<arg>3s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-10T16:29:29.599781" elapsed="0.027312"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-10T16:29:29.628095" level="INFO">Clicking element '//*[@class='ant-pagination-item ant-pagination-item-1']'.</msg>
-<arg>${regOneButtonPage}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-10T16:29:29.628095" elapsed="0.056748"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-10T16:29:30.685341" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-10T16:29:29.684843" elapsed="1.000498"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${regOneBtnActived}</arg>
-<arg>3s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-10T16:29:30.685865" elapsed="0.021342"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-10T16:29:30.707207" elapsed="2.237169"/>
-</kw>
-<status status="PASS" start="2024-06-10T16:29:27.750901" elapsed="5.193475"/>
-</kw>
-<doc>As a user able to click one button to prev page</doc>
-<tag>Registration</tag>
-<status status="PASS" start="2024-06-10T16:29:13.983078" elapsed="18.962939"/>
+<doc>As a user admin success login to applications</doc>
+<tag>AM-TC-41</tag>
+<tag>Login</tag>
+<status status="PASS" start="2024-06-24T16:33:25.830468" elapsed="23.293611"/>
 </test>
-<status status="PASS" start="2024-06-10T16:29:13.849508" elapsed="19.096509"/>
+<status status="PASS" start="2024-06-24T16:33:25.707458" elapsed="23.421105"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.847485" elapsed="19.098532"/>
+<status status="PASS" start="2024-06-24T16:33:25.701057" elapsed="23.427506"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.841636" elapsed="19.104381"/>
+<status status="PASS" start="2024-06-24T16:33:25.701057" elapsed="23.437970"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.841636" elapsed="19.115078"/>
+<status status="PASS" start="2024-06-24T16:33:25.696536" elapsed="23.445652"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.838943" elapsed="19.120144"/>
+<status status="PASS" start="2024-06-24T16:33:25.692233" elapsed="23.453560"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.836923" elapsed="19.123677"/>
+<status status="PASS" start="2024-06-24T16:33:25.692233" elapsed="23.463413"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.832275" elapsed="19.130703"/>
+<status status="PASS" start="2024-06-24T16:33:25.690109" elapsed="23.467865"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.831289" elapsed="19.133330"/>
+<status status="PASS" start="2024-06-24T16:33:25.678380" elapsed="23.481388"/>
 </suite>
-<status status="PASS" start="2024-06-10T16:29:13.817357" elapsed="19.148902"/>
+<status status="PASS" start="2024-06-24T16:33:25.665109" elapsed="23.504693"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Registration</stat>
+<stat pass="1" fail="0" skip="0">AM-TC-41</stat>
+<stat pass="1" fail="0" skip="0">Login</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="J-Mavs">J-Mavs</stat>
@@ -183,8 +136,8 @@
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Ui">J-Mavs.Asset Management.Src.Tests.Ui</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="Web">J-Mavs.Asset Management.Src.Tests.Ui.Web</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Feature">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Registration Asset">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Registration Asset</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestRegistrationAsset">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Registration Asset.TestRegistrationAsset</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Login">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestLogin">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Login.TestLogin</stat>
 </suite>
 </statistics>
 <errors>
