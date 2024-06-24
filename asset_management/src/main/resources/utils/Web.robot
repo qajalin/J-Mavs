@@ -8,7 +8,7 @@ Prepare Environment
     Create Webdriver    Chrome
 
 Open Browser To Login Page
-    Go To    ${LOGIN URL}
+    Go To    ${DEV_URL}
     Maximize Browser Window
     Wait Until Page Contains Element    ${welcomePage}
     Element Text Should Be    ${welcomePage}    Tools Asset Management
@@ -30,7 +30,7 @@ Validate click icon in password field
     Close Browser
 
 Login success
-    Input Text    ${userLogin}    ${EMAIL}
+    Input Text    ${userLogin}    ${ADMIN_OPS}
     Sleep    1s
     Input Text    ${passLogin}    ${PASSWORD}
     Sleep    1s
@@ -40,7 +40,7 @@ Login success
     Sleep    1s
 
 Login success with show password
-    Input Text    ${userLogin}    ${EMAIL}
+    Input Text    ${userLogin}    ${ADMIN_OPS}
     Sleep    1s
     Input Text    ${passLogin}    ${PASSWORD}
     Sleep    1s
@@ -61,7 +61,7 @@ Login with invalid username
     Close Browser
 
 Login with invalid password
-    Input Text    ${userLogin}    ${EMAIL}
+    Input Text    ${userLogin}    ${ADMIN_OPS}
     Sleep    1s
     Input Text    ${passLogin}    admin123
     Sleep    1s

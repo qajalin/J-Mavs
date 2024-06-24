@@ -1,9 +1,7 @@
+**** Settings ***
+Variables    ../../../../config/dev.yaml
 
 *** Variables ***
-${LOGIN URL}    https://james.jalin.co.id:8443/
-${EMAIL}        admin.itops@jalin.co.id
-${PASSWORD}     password
-
 #Element page login
 ${welcomePage}    //h4[contains(text(),'Tools Asset Management')]
 ${userLogin}    //input[@id='control-hooks_username']   

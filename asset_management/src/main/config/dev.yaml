@@ -1,6 +1,6 @@
 # These are scalars:
 PROD_URL: https://james.jalin.co.id:8444
-BASE_URL: http://james-dev.jalin.co.id:443/login
+DEV_URL: http://james-dev.jalin.co.id:443/login
 
 # SUPER ADMIN
 SUPER_ADMIN: tools.asset@jalin.co.id
