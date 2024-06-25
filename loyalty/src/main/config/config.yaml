@@ -1,0 +1,18 @@
+# These are data:
+ADMIN_URL: https://adminjalin-stg.ottopoint.id/#/login
+PARTNER_URL: https://clientjalin-stg.ottopoint.id/#/login
+NASABAH_URL: https://jalin-stg.ottopoint.id/auth/login
+
+# Admin login
+ADMIN_USER: okky.jalin
+ADMIN_PASS: Kucingmp2000%
+
+# Partner login
+PARTNER_USER: arief.setiawan
+PARTNER_PASS: Burungmp2000%
+
+# Nasabah login
+NASABAH_URL: 85771064476
+NASABAH_PIN: 111111
+
+
