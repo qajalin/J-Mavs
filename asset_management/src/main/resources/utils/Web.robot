@@ -8,7 +8,7 @@ Prepare Environment
     Create Webdriver    Chrome
 
 Open Browser To Login Page
-    Go To    ${BASE_URL}
+    Go To    ${DEV_URL}
     Maximize Browser Window
     Wait Until Page Contains Element    ${welcomePage}
     Element Text Should Be    ${welcomePage}    Tools Asset Management
