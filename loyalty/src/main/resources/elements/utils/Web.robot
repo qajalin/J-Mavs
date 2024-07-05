@@ -18,7 +18,7 @@ Login as Admin success
     Click Element    ${submitButton}
     Wait Until Page Contains Element    ${welcomeAdminUser}
     Wait Until Page Contains Element    ${welcomeAdminDashborad}
-    Element Text Should Be    ${welcomeAdminUser}    Welcome okky.jalin
+    Element Text Should Be    ${welcomeAdminUser}    Welcome automation.admin
     Sleep    1s
     Element Text Should Be    ${welcomeAdminDashborad}    Web admin
     Sleep    1s
