@@ -1,178 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-25T13:37:48.702204" rpa="false" schemaversion="5">
-<suite id="s1" name="J-Mavs" source="C:\Testing\J-Mavs">
-<suite id="s1-s1" name="Asset Management" source="C:\Testing\J-Mavs\asset_management">
-<suite id="s1-s1-s1" name="Src" source="C:\Testing\J-Mavs\asset_management\src">
-<suite id="s1-s1-s1-s1" name="Tests" source="C:\Testing\J-Mavs\asset_management\src\tests">
-<suite id="s1-s1-s1-s1-s1" name="Ui" source="C:\Testing\J-Mavs\asset_management\src\tests\ui">
-<suite id="s1-s1-s1-s1-s1-s1" name="Web" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web">
-<suite id="s1-s1-s1-s1-s1-s1-s1" name="Feature" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature">
-<suite id="s1-s1-s1-s1-s1-s1-s1-s1" name="Penerimaan Asset" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\penerimaan_asset">
-<suite id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestPenerimaanAsset" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\penerimaan_asset\TestPenerimaanAsset.robot">
-<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="Test Validation click penerimaan asset feature" line="7">
-<kw name="Prepare Environment" owner="Web" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:37:48.888043" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-06-25T13:37:48.888043" elapsed="1.620169"/>
-</kw>
-<status status="PASS" start="2024-06-25T13:37:48.888043" elapsed="1.620169"/>
-</kw>
-<kw name="Open Browser To Login Page" owner="Web">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:37:50.508212" level="INFO">Opening url 'https://james.jalin.co.id:8443/'</msg>
-<arg>${LOGIN URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-06-25T13:37:50.508212" elapsed="13.473775"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-25T13:38:03.983235" elapsed="0.081128"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${welcomePage}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-25T13:38:04.064363" elapsed="0.023926"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:38:04.088289" level="INFO">Verifying element '//h4[contains(text(),'Tools Asset Management')]' contains exact text 'Tools Asset Management'.</msg>
-<arg>${welcomePage}</arg>
-<arg>Tools Asset Management</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-25T13:38:04.088289" elapsed="0.046776"/>
-</kw>
-<status status="PASS" start="2024-06-25T13:37:50.508212" elapsed="13.627860"/>
-</kw>
-<kw name="Login success" owner="Web">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:38:04.137189" level="INFO">Typing text 'admin.itops@jalin.co.id' into text field '//input[@id='control-hooks_username']'.</msg>
-<arg>${userLogin}</arg>
-<arg>${EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-25T13:38:04.137189" elapsed="0.246117"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-25T13:38:05.384602" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-25T13:38:04.383841" elapsed="1.000761"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:38:05.384602" level="INFO">Typing text 'password' into text field '//input[@id='control-hooks_password']'.</msg>
-<arg>${passLogin}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-25T13:38:05.384602" elapsed="0.258101"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-25T13:38:06.643093" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-25T13:38:05.642703" elapsed="1.000390"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:38:06.643093" level="INFO">Clicking button '//*[@type='submit']'.</msg>
-<arg>${loginButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-25T13:38:06.643093" elapsed="0.128615"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${profileAdmin}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-25T13:38:06.771708" elapsed="1.969473"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:38:08.741181" level="INFO">Verifying element '//*[contains(text(),'Robby | User')]' contains exact text 'Robby | User'.</msg>
-<arg>${profileAdmin}</arg>
-<arg>Robby | User</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-25T13:38:08.741181" elapsed="0.032576"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-25T13:38:09.782141" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-25T13:38:08.773757" elapsed="1.008384"/>
-</kw>
-<status status="PASS" start="2024-06-25T13:38:04.137189" elapsed="5.644952"/>
-</kw>
-<kw name="Validation click penerimaan asset feature" owner="Penerimaan">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:38:09.782141" level="INFO">Clicking element '//*[@role='menuitem' and @path='/penerimaan-asset']'.</msg>
-<arg>${menuPenerimaanAset}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-25T13:38:09.782141" elapsed="0.117848"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-25T13:38:10.900062" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-25T13:38:09.899989" elapsed="1.000073"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${titlePenerimaanAset}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-25T13:38:10.900062" elapsed="0.072835"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-25T13:38:10.972897" level="INFO">Verifying element '//*[@title='Penerimaan Asset']' contains exact text 'Penerimaan Asset'.</msg>
-<arg>${titlePenerimaanAset}</arg>
-<arg>Penerimaan Asset</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-25T13:38:10.972897" elapsed="0.033659"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-25T13:38:12.007005" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-25T13:38:11.006556" elapsed="1.000449"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-25T13:38:12.007005" elapsed="2.366731"/>
-</kw>
-<status status="PASS" start="2024-06-25T13:38:09.782141" elapsed="4.591595"/>
-</kw>
-<doc>As a user able to click penerimaan asset menu</doc>
-<tag>Penerimaan</tag>
-<status status="PASS" start="2024-06-25T13:37:48.888043" elapsed="25.485693"/>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-05T11:10:17.095952" rpa="false" schemaversion="5">
+<suite id="s1" name="J-Mavs" source="C:\Users\Jepri\project\J-Mavs">
+<suite id="s1-s1" name="Loyalty" source="C:\Users\Jepri\project\J-Mavs\loyalty">
+<suite id="s1-s1-s1" name="Src" source="C:\Users\Jepri\project\J-Mavs\loyalty\src">
+<suite id="s1-s1-s1-s1" name="Test" source="C:\Users\Jepri\project\J-Mavs\loyalty\src\test">
+<suite id="s1-s1-s1-s1-s1" name="Ui" source="C:\Users\Jepri\project\J-Mavs\loyalty\src\test\ui">
+<suite id="s1-s1-s1-s1-s1-s1" name="Web" source="C:\Users\Jepri\project\J-Mavs\loyalty\src\test\ui\web">
+<suite id="s1-s1-s1-s1-s1-s1-s1" name="Dashboard Admin" source="C:\Users\Jepri\project\J-Mavs\loyalty\src\test\ui\web\dashboard_admin">
+<suite id="s1-s1-s1-s1-s1-s1-s1-s1" name="Feature" source="C:\Users\Jepri\project\J-Mavs\loyalty\src\test\ui\web\dashboard_admin\feature">
+<suite id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="History Transaction" source="C:\Users\Jepri\project\J-Mavs\loyalty\src\test\ui\web\dashboard_admin\feature\history_transaction">
+<suite id="s1-s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestHistoryTransaction" source="C:\Users\Jepri\project\J-Mavs\loyalty\src\test\ui\web\dashboard_admin\feature\history_transaction\TestHistoryTransaction.robot">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" line="8">
+<tag>HTET001</tag>
+<status status="FAIL" start="2024-07-05T11:10:17.318918" elapsed="0.000000">Test name cannot be empty.</status>
 </test>
-<status status="PASS" start="2024-06-25T13:37:48.742315" elapsed="25.633119"/>
+<status status="FAIL" start="2024-07-05T11:10:17.147711" elapsed="0.171207"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.742315" elapsed="25.633119"/>
+<status status="FAIL" start="2024-07-05T11:10:17.144718" elapsed="0.183570"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.734301" elapsed="25.646422"/>
+<status status="FAIL" start="2024-07-05T11:10:17.142737" elapsed="0.189301"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.734301" elapsed="25.647926"/>
+<status status="FAIL" start="2024-07-05T11:10:17.139732" elapsed="0.194303"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.734301" elapsed="25.650441"/>
+<status status="FAIL" start="2024-07-05T11:10:17.136740" elapsed="0.198291"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.726262" elapsed="25.659259"/>
+<status status="FAIL" start="2024-07-05T11:10:17.133755" elapsed="0.203271"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.726262" elapsed="25.660771"/>
+<status status="FAIL" start="2024-07-05T11:10:17.129269" elapsed="0.208753"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.726262" elapsed="25.662142"/>
+<status status="FAIL" start="2024-07-05T11:10:17.118876" elapsed="0.220144"/>
 </suite>
-<status status="PASS" start="2024-06-25T13:37:48.703725" elapsed="25.687391"/>
+<status status="FAIL" start="2024-07-05T11:10:17.118876" elapsed="0.222138"/>
+</suite>
+<status status="FAIL" start="2024-07-05T11:10:17.100004" elapsed="0.242008"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Penerimaan</stat>
+<stat pass="0" fail="1" skip="0">HTET001</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="J-Mavs">J-Mavs</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Asset Management">J-Mavs.Asset Management</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Src">J-Mavs.Asset Management.Src</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Tests">J-Mavs.Asset Management.Src.Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Ui">J-Mavs.Asset Management.Src.Tests.Ui</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="Web">J-Mavs.Asset Management.Src.Tests.Ui.Web</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Feature">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Penerimaan Asset">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Penerimaan Asset</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestPenerimaanAsset">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Penerimaan Asset.TestPenerimaanAsset</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="J-Mavs">J-Mavs</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Loyalty">J-Mavs.Loyalty</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Src">J-Mavs.Loyalty.Src</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Test">J-Mavs.Loyalty.Src.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Ui">J-Mavs.Loyalty.Src.Test.Ui</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1" name="Web">J-Mavs.Loyalty.Src.Test.Ui.Web</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Dashboard Admin">J-Mavs.Loyalty.Src.Test.Ui.Web.Dashboard Admin</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Feature">J-Mavs.Loyalty.Src.Test.Ui.Web.Dashboard Admin.Feature</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="History Transaction">J-Mavs.Loyalty.Src.Test.Ui.Web.Dashboard Admin.Feature.History Transaction</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestHistoryTransaction">J-Mavs.Loyalty.Src.Test.Ui.Web.Dashboard Admin.Feature.History Transaction.TestHistoryTransaction</stat>
 </suite>
 </statistics>
 <errors>
