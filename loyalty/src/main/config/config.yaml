@@ -4,8 +4,8 @@ PARTNER_URL: https://clientjalin-stg.ottopoint.id/#/login
 NASABAH_URL: https://jalin-stg.ottopoint.id/auth/login
 
 # Admin login
-ADMIN_USER: okky.jalin
-ADMIN_PASS: Kucingmp2000%
+ADMIN_USER: automation.admin
+ADMIN_PASS: P@ssword123
 
 # Partner login
 PARTNER_USER: arief.setiawan
