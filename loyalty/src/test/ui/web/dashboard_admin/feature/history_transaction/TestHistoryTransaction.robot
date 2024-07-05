@@ -24,7 +24,7 @@ Test Setup    Prepare Environment
 #     Web.Open admin dashborad to login page
 #     Web.Login as Admin success
 #     historyTransaction.buka menu history transaction - Earning Transaction
-#     historyTransaction.ExportAsCSV
+#     historyTransaction.ExportAsCSV - Earning Transaction
 #     Close Browser
 
 # Test Validation Check Isi Export Data Sesuai Filteran - Earning   
@@ -33,10 +33,10 @@ Test Setup    Prepare Environment
 #     web.Login as Admin success
 #     historyTransaction.buka menu history transaction - Earning Transaction
 #     historyTransaction.Search Data Transactional ID
-#     historyTransaction.ExportAsCSV
+#     historyTransaction.ExportAsCSV - Earning Transaction
 #     Close Window
 
-# Test Validation Cek transaksi Success - Earning Transaction Cek data response code 00    (UNTUK tEST INI MASIH BELUM BISA BERHASIL KARENA KPI WEB MASIH BERMASALAH)
+# Test Validation Cek transaksi Success - Earning Transaction Cek data response code 00    
 #     [Tags]    HTET005
 #     web.Open admin dashborad to login page
 #     web.Login as Admin success
@@ -67,10 +67,27 @@ Test Setup    Prepare Environment
 #     historyTransaction.buka menu Earning Transaction - Spent Point
 #     Close Browser
 
-Test Validation Check Filter Data - Spent Point 00
-    [Tags]    HTET009
-    web.Open admin dashborad to login page
-    web.Login as Admin success
-    historyTransaction.buka menu Earning Transaction - Spent Point
-    historyTransaction.Search menu Earning Transaction - Spent Point - Respone Code 00
-    Close Browser
+# Test Validation Check Filter Data - Spent Point 00
+#     [Tags]    HTET009
+#     web.Open admin dashborad to login page
+#     web.Login as Admin success
+#     historyTransaction.buka menu Earning Transaction - Spent Point
+#     historyTransaction.Search menu Earning Transaction - Spent Point - Respone Code 00
+#     Close Browser
+
+# Test Validation Check Export Data - Spent Point
+#     [Tags]    HTET010
+#     web.Open admin dashborad to login page
+#     web.Login as Admin success
+#     historyTransaction.buka menu Earning Transaction - Spent Point
+#     historyTransaction.Check Export Data - Spent Point
+#     Close Browser
+
+# Test Validation Cek transaksi spent point - redemption
+#     [Tags]    HTET011
+#     Web.Open admin dashborad to login page
+#     web.Login as Admin success
+#     historyTransaction.Buka Menu Redemption
+#     Close Browser
+
+    

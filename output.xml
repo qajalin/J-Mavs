@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-05T14:53:11.074237" rpa="false" schemaversion="5">
+<suite id="s1" name="TestHistoryTransaction" source="c:\Users\Jepri\project\J-Mavs\loyalty\src\test\ui\web\dashboard_admin\feature\history_transaction\TestHistoryTransaction.robot">
+<test id="s1-t1" name="Test Validation Cek transaksi spent point - redemption" line="86">
+<kw name="Prepare Environment" owner="Web" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:11.853344" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-05T14:53:11.851347" elapsed="1.387635"/>
+</kw>
+<status status="PASS" start="2024-07-05T14:53:11.844368" elapsed="1.398066"/>
+</kw>
+<kw name="Open admin dashborad to login page" owner="Web">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:13.245440" level="INFO">Opening url 'https://adminjalin-stg.ottopoint.id/#/login'</msg>
+<arg>${ADMIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-05T14:53:13.245440" elapsed="10.408471"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-05T14:53:23.654908" elapsed="0.030968"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminDashborad}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T14:53:23.686885" elapsed="0.110634"/>
+</kw>
+<status status="PASS" start="2024-07-05T14:53:13.245440" elapsed="10.555070"/>
+</kw>
+<kw name="Login as Admin success" owner="Web">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:23.805499" level="INFO">Typing text 'automation.admin' into text field '//*[@id='userID']'.</msg>
+<arg>${adminUserLogin}</arg>
+<arg>${ADMIN_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T14:53:23.804501" elapsed="0.136989"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:24.941776" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:23.941490" elapsed="1.000286"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:24.945292" level="INFO">Clicking element '//*[contains(text(),'Submit')]'.</msg>
+<arg>${submitButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T14:53:24.941776" elapsed="0.051505"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminUser}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T14:53:24.995483" elapsed="0.434614"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminDashborad}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T14:53:25.431095" elapsed="0.008976"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:25.442065" level="INFO">Verifying element '//*[contains(text(),'Welcome automation.admin')]' contains exact text 'Welcome automation.admin'.</msg>
+<arg>${welcomeAdminUser}</arg>
+<arg>Welcome automation.admin</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T14:53:25.441068" elapsed="0.014490"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:26.456064" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:25.455558" elapsed="1.000506"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:26.456064" level="INFO">Verifying element '//*[contains(text(),'Web admin')]' contains exact text 'Web admin'.</msg>
+<arg>${welcomeAdminDashborad}</arg>
+<arg>Web admin</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T14:53:26.456064" elapsed="0.009216"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:27.475878" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:26.475537" elapsed="1.001433"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:27.478504" level="INFO">Typing text 'P@ssword123' into text field '//*[@id='password']'.</msg>
+<arg>${adminPassLogin}</arg>
+<arg>${ADMIN_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T14:53:27.478504" elapsed="0.075176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:28.556024" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:27.555688" elapsed="1.000336"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:28.556024" level="INFO">Clicking element '//*[contains(text(),'Login')]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T14:53:28.556024" elapsed="0.049590"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:29.605757" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:28.605614" elapsed="1.000143"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminJalinPortal}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T14:53:29.605757" elapsed="1.300538"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:30.910457" level="INFO">Verifying element '//*[contains(text(),'Jalin Admin Portal')]' contains exact text 'Jalin Admin Portal'.</msg>
+<arg>${welcomeAdminJalinPortal}</arg>
+<arg>Jalin Admin Portal</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T14:53:30.907668" elapsed="0.028475"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:31.938329" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:30.936704" elapsed="1.001625"/>
+</kw>
+<status status="PASS" start="2024-07-05T14:53:23.802507" elapsed="8.136823"/>
+</kw>
+<kw name="Buka Menu Redemption" owner="historyTransaction">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:34.947103" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:31.944230" elapsed="3.002873"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${WelcomeJalinAdminPortal}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T14:53:34.947103" elapsed="0.014238"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:37.963964" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:34.962340" elapsed="3.001624"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:37.965502" level="INFO">Clicking element '//*[contains(text(),'History Transaction')]'.</msg>
+<arg>${buttonHistoryTransaksi}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T14:53:37.965502" elapsed="0.045460"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:41.011326" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:38.010962" elapsed="3.000364"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:41.011326" level="INFO">Clicking element '//*[contains(text(),'MultiIssuer')]'.</msg>
+<arg>${buttonMultiIssuer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T14:53:41.011326" elapsed="0.046115"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:44.057825" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:41.057441" elapsed="3.000384"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T14:53:44.057825" level="INFO">Clicking element '//*[contains(text(),'Redemption')]'.</msg>
+<arg>${butttonRedemption}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T14:53:44.057825" elapsed="0.126906"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T14:53:47.187133" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T14:53:44.185728" elapsed="3.001405"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${butttonRedemption}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-05T14:53:47.187133" elapsed="0.028187"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dataTabelRedemption}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-05T14:53:47.216325" elapsed="0.019252"/>
+</kw>
+<status status="PASS" start="2024-07-05T14:53:31.943222" elapsed="15.292355"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-05T14:53:47.235577" elapsed="2.287499"/>
+</kw>
+<tag>HTET011</tag>
+<status status="PASS" start="2024-07-05T14:53:11.837702" elapsed="37.687879"/>
+</test>
+<status status="PASS" start="2024-07-05T14:53:11.089854" elapsed="38.435727"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">HTET011</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestHistoryTransaction">TestHistoryTransaction</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

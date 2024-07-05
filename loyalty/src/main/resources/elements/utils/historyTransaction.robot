@@ -16,7 +16,7 @@ buka menu history transaction - Earning Transaction
     Wait Until Element Is Visible    ${buttonEarningTransaction}    3s
     Wait Until Element Is Visible    ${dataTabelHistoryTransaction}    3s
 
-ExportAsCSV
+ExportAsCSV - Earning Transaction
     Wait Until Page Contains Element    ${buttonEarningTransaction}    3s
     Click Element    ${ExportAs}
     Sleep    3s
@@ -85,3 +85,23 @@ Search menu Earning Transaction - Spent Point - Respone Code 00
     Sleep    5s
     Element Text Should Be    ${validasiDataETrc}    00
     Sleep    3s
+
+Check Export Data - Spent Point
+    Wait Until Page Contains Element    ${buttonSpentPoint}    3s
+    Click Element    ${ExportAs}
+    Sleep    3s
+    Click Element    ${ExportAsCSV}
+    Wait Until Element Is Visible    ${notifDownload}    1s
+
+Buka Menu Redemption
+    Sleep    3s
+    Wait Until Page Contains Element    ${WelcomeJalinAdminPortal}    3s
+    Sleep    3s
+    Click Element    ${buttonHistoryTransaksi}
+    Sleep    3s
+    Click Element    ${buttonMultiIssuer}
+    Sleep    3s
+    Click Element    ${butttonRedemption}
+    Sleep    3s
+    Wait Until Element Is Visible    ${butttonRedemption}    3s
+    Wait Until Element Is Visible    ${dataTabelRedemption}    3s
