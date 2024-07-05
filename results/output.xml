@@ -1,205 +1,461 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-28T08:29:18.276081" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-07-05T17:08:12.331256" rpa="false" schemaversion="5">
 <suite id="s1" name="J-Mavs" source="C:\Testing\J-Mavs">
-<suite id="s1-s1" name="Asset Management" source="C:\Testing\J-Mavs\asset_management">
-<suite id="s1-s1-s1" name="Src" source="C:\Testing\J-Mavs\asset_management\src">
-<suite id="s1-s1-s1-s1" name="Tests" source="C:\Testing\J-Mavs\asset_management\src\tests">
-<suite id="s1-s1-s1-s1-s1" name="Ui" source="C:\Testing\J-Mavs\asset_management\src\tests\ui">
-<suite id="s1-s1-s1-s1-s1-s1" name="Web" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web">
-<suite id="s1-s1-s1-s1-s1-s1-s1" name="Feature" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature">
-<suite id="s1-s1-s1-s1-s1-s1-s1-s1" name="Daftar Asset" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\daftar_asset">
-<suite id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestDaftarAsset" source="C:\Testing\J-Mavs\asset_management\src\tests\ui\web\feature\daftar_asset\TestDaftarAsset.robot">
-<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="Test validation search data via Cari field base on Asset" line="35">
+<suite id="s1-s1" name="Loyalty" source="C:\Testing\J-Mavs\loyalty">
+<suite id="s1-s1-s1" name="Src" source="C:\Testing\J-Mavs\loyalty\src">
+<suite id="s1-s1-s1-s1" name="Test" source="C:\Testing\J-Mavs\loyalty\src\test">
+<suite id="s1-s1-s1-s1-s1" name="Ui" source="C:\Testing\J-Mavs\loyalty\src\test\ui">
+<suite id="s1-s1-s1-s1-s1-s1" name="Web" source="C:\Testing\J-Mavs\loyalty\src\test\ui\web">
+<suite id="s1-s1-s1-s1-s1-s1-s1" name="Dashboard Admin" source="C:\Testing\J-Mavs\loyalty\src\test\ui\web\dashboard_admin">
+<suite id="s1-s1-s1-s1-s1-s1-s1-s1" name="Feature" source="C:\Testing\J-Mavs\loyalty\src\test\ui\web\dashboard_admin\feature">
+<suite id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestLoginAdmin" source="C:\Testing\J-Mavs\loyalty\src\test\ui\web\dashboard_admin\feature\TestLoginAdmin.robot">
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t1" name="Test Validation As a user admin login success" line="6">
 <kw name="Prepare Environment" owner="Web" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:18.524733" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-07-05T17:08:12.512538" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-06-28T08:29:18.524733" elapsed="1.893931"/>
+<status status="PASS" start="2024-07-05T17:08:12.512538" elapsed="1.533046"/>
 </kw>
-<status status="PASS" start="2024-06-28T08:29:18.524733" elapsed="1.900437"/>
+<status status="PASS" start="2024-07-05T17:08:12.511549" elapsed="1.534567"/>
 </kw>
-<kw name="Open Browser To Login Page" owner="Web">
+<kw name="Open admin dashborad to login page" owner="Web">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:20.427236" level="INFO">Opening url 'http://james-dev.jalin.co.id:443/login'</msg>
-<arg>${DEV_URL}</arg>
+<msg time="2024-07-05T17:08:14.047171" level="INFO">Opening url 'https://adminjalin-stg.ottopoint.id/#/login'</msg>
+<arg>${ADMIN_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-06-28T08:29:20.426179" elapsed="18.777987"/>
+<status status="PASS" start="2024-07-05T17:08:14.046636" elapsed="1.292144"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-28T08:29:39.204166" elapsed="0.065473"/>
+<status status="PASS" start="2024-07-05T17:08:15.338780" elapsed="0.037203"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${welcomePage}</arg>
+<arg>${welcomeAdminDashborad}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T08:29:39.269639" elapsed="0.057624"/>
+<status status="PASS" start="2024-07-05T17:08:15.376993" elapsed="0.018025"/>
 </kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:39.332984" level="INFO">Verifying element '//h4[contains(text(),'Tools Asset Management')]' contains exact text 'Tools Asset Management'.</msg>
-<arg>${welcomePage}</arg>
-<arg>Tools Asset Management</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-28T08:29:39.332984" elapsed="0.055945"/>
+<status status="PASS" start="2024-07-05T17:08:14.046116" elapsed="1.348902"/>
 </kw>
-<status status="PASS" start="2024-06-28T08:29:20.426179" elapsed="18.962750"/>
-</kw>
-<kw name="Login success" owner="Web">
+<kw name="Login as Admin success" owner="Web">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:39.404591" level="INFO">Typing text 'admin.itops@jalin.co.id' into text field '//input[@id='control-hooks_username']'.</msg>
-<arg>${userLogin}</arg>
-<arg>${ADMIN_OPS}</arg>
+<msg time="2024-07-05T17:08:15.397028" level="INFO">Typing text 'automation.admin' into text field '//*[@id='userID']'.</msg>
+<arg>${adminUserLogin}</arg>
+<arg>${ADMIN_USER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T08:29:39.404591" elapsed="0.482348"/>
+<status status="PASS" start="2024-07-05T17:08:15.396026" elapsed="0.143695"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T08:29:40.888789" level="INFO">Slept 1 second.</msg>
+<msg time="2024-07-05T17:08:16.540045" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T08:29:39.888041" elapsed="1.000748"/>
+<status status="PASS" start="2024-07-05T17:08:15.539721" elapsed="1.000324"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:40.888789" level="INFO">Typing text 'password' into text field '//input[@id='control-hooks_password']'.</msg>
-<arg>${passLogin}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T08:29:40.888789" elapsed="0.273533"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T08:29:42.178635" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T08:29:41.162322" elapsed="1.016313"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:42.180763" level="INFO">Clicking button '//*[@type='submit']'.</msg>
-<arg>${loginButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T08:29:42.178635" elapsed="0.237502"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${profileAdmin}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T08:29:42.416878" elapsed="1.623023"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:44.039901" level="INFO">Verifying element '//*[contains(text(),'Robby | User')]' contains exact text 'Robby | User'.</msg>
-<arg>${profileAdmin}</arg>
-<arg>Robby | User</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-28T08:29:44.039901" elapsed="0.038266"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T08:29:45.079623" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T08:29:44.078758" elapsed="1.000865"/>
-</kw>
-<status status="PASS" start="2024-06-28T08:29:39.388929" elapsed="5.690694"/>
-</kw>
-<kw name="Validation field Cari base on Asset" owner="Daftar">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:45.083635" level="INFO">Clicking element '//*[@role='menuitem' and @path='/daftar-asset']'.</msg>
-<arg>${daftarAssetMenu}</arg>
+<msg time="2024-07-05T17:08:16.541051" level="INFO">Clicking element '//*[contains(text(),'Submit')]'.</msg>
+<arg>${submitButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T08:29:45.079623" elapsed="0.170411"/>
+<status status="PASS" start="2024-07-05T17:08:16.540045" elapsed="0.046518"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T08:29:46.250580" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T08:29:45.250034" elapsed="1.000546"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminUser}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:16.586563" elapsed="0.227293"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${daftarFieldTable}</arg>
-<arg>3s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T08:29:46.250580" elapsed="0.056517"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminDashborad}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:16.813856" elapsed="0.008626"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:46.309276" level="INFO">Verifying element '//*[@class='ant-table-cell ant-table-column-has-sorters'][1]//*[contains(text(),'Asset')]' contains exact text 'Asset'.</msg>
-<arg>${daftarFieldAsset}</arg>
-<arg>Asset</arg>
+<msg time="2024-07-05T17:08:16.823481" level="INFO">Verifying element '//*[contains(text(),'Welcome automation.admin')]' contains exact text 'Welcome automation.admin'.</msg>
+<arg>${welcomeAdminUser}</arg>
+<arg>Welcome automation.admin</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-28T08:29:46.308070" elapsed="0.046344"/>
+<status status="PASS" start="2024-07-05T17:08:16.822482" elapsed="0.016867"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:17.839721" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:16.839349" elapsed="1.000372"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:17.840731" level="INFO">Verifying element '//*[contains(text(),'Web admin')]' contains exact text 'Web admin'.</msg>
+<arg>${welcomeAdminDashborad}</arg>
+<arg>Web admin</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T17:08:17.840731" elapsed="0.019152"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:18.861252" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:17.860881" elapsed="1.000371"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:46.356268" level="INFO">Typing text 'monitor' into text field '//input[@placeholder='Cari...']'.</msg>
-<arg>${daftarCariField}</arg>
-<arg>monitor</arg>
+<msg time="2024-07-05T17:08:18.862346" level="INFO">Typing text 'P@ssword123' into text field '//*[@id='password']'.</msg>
+<arg>${adminPassLogin}</arg>
+<arg>${ADMIN_PASS}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T08:29:46.354414" elapsed="0.388706"/>
+<status status="PASS" start="2024-07-05T17:08:18.861252" elapsed="0.093898"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T08:29:47.743508" level="INFO">Slept 1 second.</msg>
+<msg time="2024-07-05T17:08:19.956637" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T08:29:46.743120" elapsed="1.000388"/>
+<status status="PASS" start="2024-07-05T17:08:18.956279" elapsed="1.000358"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-06-28T08:29:48.012493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-28T08:29:48.012493" level="FAIL">Element with locator '//*[@class='ant-table-row ant-table-row-level-0'][1]//*[contains(text(),'Monitor 24')]' not found.</msg>
-<arg>${daftarCariAsset}</arg>
-<arg>3s</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-06-28T08:29:47.745052" elapsed="0.276390">Element with locator '//*[@class='ant-table-row ant-table-row-level-0'][1]//*[contains(text(),'Monitor 24')]' not found.</status>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<arg>${daftarCariAsset}</arg>
-<arg>Monitor 24</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="NOT RUN" start="2024-06-28T08:29:48.021442" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:19.958561" level="INFO">Clicking element '//*[contains(text(),'Login')]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:19.957552" elapsed="0.044949"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:21.003733" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-06-28T08:29:48.021442" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-05T17:08:20.003505" elapsed="1.000855"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminJalinPortal}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:21.004515" elapsed="1.095558"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:22.101072" level="INFO">Verifying element '//*[contains(text(),'Jalin Admin Portal')]' contains exact text 'Jalin Admin Portal'.</msg>
+<arg>${welcomeAdminJalinPortal}</arg>
+<arg>Jalin Admin Portal</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T17:08:22.100073" elapsed="0.020212"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:23.120486" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:22.120285" elapsed="1.001218"/>
+</kw>
+<status status="PASS" start="2024-07-05T17:08:15.396026" elapsed="7.725477"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-06-28T08:29:48.021442" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-05T17:08:23.122503" elapsed="2.482614"/>
 </kw>
-<status status="FAIL" start="2024-06-28T08:29:45.079623" elapsed="2.941819">Element with locator '//*[@class='ant-table-row ant-table-row-level-0'][1]//*[contains(text(),'Monitor 24')]' not found.</status>
-</kw>
-<doc>As a user able to Cari data base on Asset</doc>
-<tag>Daftar Asset</tag>
-<status status="FAIL" start="2024-06-28T08:29:18.524733" elapsed="29.496709">Element with locator '//*[@class='ant-table-row ant-table-row-level-0'][1]//*[contains(text(),'Monitor 24')]' not found.</status>
+<doc>As a user admin login success</doc>
+<tag>TC-APLG001</tag>
+<status status="PASS" start="2024-07-05T17:08:12.510621" elapsed="13.095349"/>
 </test>
-<status status="FAIL" start="2024-06-28T08:29:18.330814" elapsed="29.690628"/>
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t2" name="Test Validation As a user admin forgot password" line="13">
+<kw name="Prepare Environment" owner="Web" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:25.609970" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-05T17:08:25.609970" elapsed="1.462801"/>
+</kw>
+<status status="PASS" start="2024-07-05T17:08:25.609004" elapsed="1.463767"/>
+</kw>
+<kw name="Open admin dashborad to login page" owner="Web">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:27.074670" level="INFO">Opening url 'https://adminjalin-stg.ottopoint.id/#/login'</msg>
+<arg>${ADMIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-05T17:08:27.074670" elapsed="1.235713"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-05T17:08:28.311384" elapsed="0.039911"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminDashborad}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:28.351295" elapsed="0.017048"/>
+</kw>
+<status status="PASS" start="2024-07-05T17:08:27.074163" elapsed="1.294180"/>
+</kw>
+<kw name="As a admin able to change password with forgot password" owner="Web">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:28.370339" level="INFO">Typing text 'automation.admin' into text field '//*[@id='userID']'.</msg>
+<arg>${adminUserLogin}</arg>
+<arg>${ADMIN_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:28.369350" elapsed="0.172493"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:29.543177" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:28.541843" elapsed="1.001334"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:29.544705" level="INFO">Clicking element '//*[contains(text(),'Submit')]'.</msg>
+<arg>${submitButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:29.543177" elapsed="0.064977"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminUser}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:29.608154" elapsed="0.224973"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminDashborad}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:29.833127" elapsed="0.011510"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:29.845142" level="INFO">Verifying element '//*[contains(text(),'Welcome automation.admin')]' contains exact text 'Welcome automation.admin'.</msg>
+<arg>${welcomeAdminUser}</arg>
+<arg>Welcome automation.admin</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T17:08:29.844637" elapsed="0.020025"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:30.866474" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:29.864662" elapsed="1.001812"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:30.867485" level="INFO">Clicking element '//*[contains(text(),'Forgot Password ?')]'.</msg>
+<arg>${forgotPasswordLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:30.866474" elapsed="0.046787"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:31.915452" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:30.913261" elapsed="1.002191"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${forgotPasswordLink}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:31.916464" elapsed="0.012295"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:31.929779" level="INFO">Verifying element '//*[contains(text(),'Forgot Password ?')]' contains exact text 'Forgot Password ?'.</msg>
+<arg>${forgotPasswordLink}</arg>
+<arg>Forgot Password ?</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T17:08:31.928759" elapsed="0.017459"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:32.947682" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:31.946218" elapsed="1.001464"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:32.949790" level="INFO">Typing text 'testAdminLoyalty@getnede.com' into text field '//*[@id='email']'.</msg>
+<arg>${inputEmail}</arg>
+<arg>testAdminLoyalty@getnede.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:32.948794" elapsed="0.129752"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:34.080372" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:33.078546" elapsed="1.001826"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:34.081379" level="INFO">Clicking button '//*[@id='btnSendEmail']'.</msg>
+<arg>${sendEmailButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:34.080372" elapsed="0.057644"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:35.138659" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:34.138016" elapsed="1.001746"/>
+</kw>
+<status status="PASS" start="2024-07-05T17:08:28.369350" elapsed="6.770412"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-05T17:08:35.140924" elapsed="2.429158"/>
+</kw>
+<doc>As a user admin forgot password</doc>
+<tag>TC-APLG002</tag>
+<status status="PASS" start="2024-07-05T17:08:25.607966" elapsed="11.963118"/>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-s1-s1-t3" name="Test Validation As a user incorrect password" line="20">
+<kw name="Prepare Environment" owner="Web" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:37.580427" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-05T17:08:37.579365" elapsed="1.406235"/>
+</kw>
+<status status="PASS" start="2024-07-05T17:08:37.578394" elapsed="1.407206"/>
+</kw>
+<kw name="Open admin dashborad to login page" owner="Web">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:38.986597" level="INFO">Opening url 'https://adminjalin-stg.ottopoint.id/#/login'</msg>
+<arg>${ADMIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-05T17:08:38.986597" elapsed="0.902729"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-05T17:08:39.890326" elapsed="0.036052"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminDashborad}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:39.927385" elapsed="0.017159"/>
+</kw>
+<status status="PASS" start="2024-07-05T17:08:38.985600" elapsed="0.958944"/>
+</kw>
+<kw name="As a admin incorrect password" owner="Web">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:39.946439" level="INFO">Typing text 'automation.admin' into text field '//*[@id='userID']'.</msg>
+<arg>${adminUserLogin}</arg>
+<arg>${ADMIN_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:39.946439" elapsed="0.143641"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:41.091152" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:40.091089" elapsed="1.000572"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:41.092670" level="INFO">Clicking element '//*[contains(text(),'Submit')]'.</msg>
+<arg>${submitButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:41.091661" elapsed="0.052343"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminUser}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:41.144004" elapsed="0.226170"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${welcomeAdminDashborad}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:41.370174" elapsed="0.008506"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:41.378680" level="INFO">Verifying element '//*[contains(text(),'Welcome automation.admin')]' contains exact text 'Welcome automation.admin'.</msg>
+<arg>${welcomeAdminUser}</arg>
+<arg>Welcome automation.admin</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T17:08:41.378680" elapsed="0.015039"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:42.394941" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:41.394719" elapsed="1.000749"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:42.396098" level="INFO">Verifying element '//*[contains(text(),'Web admin')]' contains exact text 'Web admin'.</msg>
+<arg>${welcomeAdminDashborad}</arg>
+<arg>Web admin</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-05T17:08:42.395468" elapsed="0.017980"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:43.415060" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:42.414455" elapsed="1.000605"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:43.415926" level="INFO">Typing text 'test12345' into text field '//*[@id='password']'.</msg>
+<arg>${adminPassLogin}</arg>
+<arg>test12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:43.415060" elapsed="0.084418"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:44.500918" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:43.500483" elapsed="1.000958"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:44.502446" level="INFO">Clicking element '//*[contains(text(),'Login')]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-05T17:08:44.501441" elapsed="0.053462"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:45.555261" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:44.554903" elapsed="1.002370"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${errorMsgIncorrectPass}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:45.557273" elapsed="1.070174"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-05T17:08:46.634469" level="INFO">Current page contains element '//*[contains(text(),'Username or password is incorrect')]'.</msg>
+<arg>${errorMsgIncorrectPass}</arg>
+<arg>Username or password is incorrect.</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-05T17:08:46.627447" elapsed="0.007022"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-05T17:08:47.635952" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-05T17:08:46.635481" elapsed="1.000471"/>
+</kw>
+<status status="PASS" start="2024-07-05T17:08:39.945443" elapsed="7.690509"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-05T17:08:47.637024" elapsed="2.476174"/>
+</kw>
+<doc>As a user admin incorrect password</doc>
+<tag>TC-APLG003</tag>
+<status status="PASS" start="2024-07-05T17:08:37.575093" elapsed="12.538105"/>
+</test>
+<status status="PASS" start="2024-07-05T17:08:12.373425" elapsed="37.744469"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.328666" elapsed="29.707885"/>
+<status status="PASS" start="2024-07-05T17:08:12.370427" elapsed="37.752410"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.325683" elapsed="29.715848"/>
+<status status="PASS" start="2024-07-05T17:08:12.367440" elapsed="37.758536"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.318212" elapsed="29.727296"/>
+<status status="PASS" start="2024-07-05T17:08:12.363888" elapsed="37.766630"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.318212" elapsed="29.731040"/>
+<status status="PASS" start="2024-07-05T17:08:12.361892" elapsed="37.772740"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.311655" elapsed="29.743133"/>
+<status status="PASS" start="2024-07-05T17:08:12.358892" elapsed="37.778751"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.311655" elapsed="29.743133"/>
+<status status="PASS" start="2024-07-05T17:08:12.355893" elapsed="37.786753"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.300620" elapsed="29.759052"/>
+<status status="PASS" start="2024-07-05T17:08:12.353374" elapsed="37.791781"/>
 </suite>
-<status status="FAIL" start="2024-06-28T08:29:18.285349" elapsed="29.782355"/>
+<status status="PASS" start="2024-07-05T17:08:12.336867" elapsed="37.810304"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Daftar Asset</stat>
+<stat pass="1" fail="0" skip="0">TC-APLG001</stat>
+<stat pass="1" fail="0" skip="0">TC-APLG002</stat>
+<stat pass="1" fail="0" skip="0">TC-APLG003</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="J-Mavs">J-Mavs</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Asset Management">J-Mavs.Asset Management</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Src">J-Mavs.Asset Management.Src</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Tests">J-Mavs.Asset Management.Src.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Ui">J-Mavs.Asset Management.Src.Tests.Ui</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1" name="Web">J-Mavs.Asset Management.Src.Tests.Ui.Web</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Feature">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Daftar Asset">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Daftar Asset</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestDaftarAsset">J-Mavs.Asset Management.Src.Tests.Ui.Web.Feature.Daftar Asset.TestDaftarAsset</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="J-Mavs">J-Mavs</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Loyalty">J-Mavs.Loyalty</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Src">J-Mavs.Loyalty.Src</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1" name="Test">J-Mavs.Loyalty.Src.Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Ui">J-Mavs.Loyalty.Src.Test.Ui</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="Web">J-Mavs.Loyalty.Src.Test.Ui.Web</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Dashboard Admin">J-Mavs.Loyalty.Src.Test.Ui.Web.Dashboard Admin</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="Feature">J-Mavs.Loyalty.Src.Test.Ui.Web.Dashboard Admin.Feature</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1-s1" name="TestLoginAdmin">J-Mavs.Loyalty.Src.Test.Ui.Web.Dashboard Admin.Feature.TestLoginAdmin</stat>
 </suite>
 </statistics>
 <errors>
