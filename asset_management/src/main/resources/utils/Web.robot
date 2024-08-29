@@ -38,6 +38,7 @@ Login success
     Wait Until Page Contains Element    ${profileAdmin}
     Element Text Should Be    ${profileAdmin}    Robby | User
     Sleep    1s
+    Close Browser
 
 Login success with show password
     Input Text    ${userLogin}    ${ADMIN_OPS}
