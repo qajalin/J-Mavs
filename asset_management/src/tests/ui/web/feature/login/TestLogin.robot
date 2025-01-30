@@ -4,7 +4,7 @@ Test Setup    Prepare Environment
 
 
 *** Test Cases ***
-AM-TC-41 Test login success
+Test login success
     [Documentation]    As a user admin success login to applications
     [Tags]    Login    AM-TC-41
     Web.Open Browser To Login Page
